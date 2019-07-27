@@ -1,6 +1,7 @@
 ## UI/UX React Cards Layout
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+UI is based on [`semantic-ui-react`](https://react.semantic-ui.com/).
 
 ### `npm start`
 
