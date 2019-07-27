@@ -10,97 +10,64 @@ const Card = props => {
     <article className="article">
       <div className="tags">
         <a href="/" className="ui image red label">
-          27 September 2019
+          {details.dateCompletion}
         </a>
-        <h3 className="article__category" style={styles}>
-          {details.category}
+        <h3 className="article__status" style={styles}>
+          {details.status}
         </h3>
       </div>
-      <div class="ui comments">
-        <div class="comment">
-          <div class="avatar">
-            <img src="https://i.pravatar.cc/200" />
+      <div className="ui comments">
+        <div className="comment">
+          <div className="avatar">
+            <img alt="avatar" src={details.avatar} />
           </div>
-          <div class="content">
-            <a class="author">Stevie Feliciano</a>
+          <div className="content">
+            <a href="/" className="author">
+              {details.author}
+            </a>
           </div>
-          <div class="metadata">
-            <div>Today at 5:42PM</div>
-            <div class="ui label">
-              <i aria-hidden="true" class="users icon" />
-              23 submits
+          <div className="metadata">
+            <div>{details.postingTime}</div>
+            <div className="ui label">
+              <i aria-hidden="true" className="users icon" />
+              {details.submits} submits
             </div>
           </div>
-        </div>
-      </div>
-      {/* <div class="ui comments">
-        <div class="comment">
-          <div class="content">
-            <div class="author">Stevie Feliciano</div>
-            <div class="metadata">
-              <div class="ui label">
-                <i aria-hidden="true" class="users icon" />
-                23 submits
-              </div>
-              <div>2 days ago</div>
-            </div>
-          </div>
-          <a class="avatar">
-            <img alt="avatar" src="https://i.pravatar.cc/200" />
-          </a>
-        </div>
-      </div> */}
-      <div class="ui card">
-        <div class="content">
-          <h2 className="article__title">
-            {" "}
-            <i aria-hidden="true" class="map marker alternate icon" />
-            {details.title}
-          </h2>
-        </div>
-        <div class="content">
-          {/* <div class="description">{details.excerpt}</div> */}
-          <ol role="list" class="ui list">
-            <li value="*" role="listitem" class="">
-              Signing Up
-            </li>
-            <li value="*" role="listitem" class="">
-              User Benefits
-            </li>
-            <li value="*" role="listitem" class="">
-              User Types
-              <ol role="listitem" class="item">
-                <li value="-" role="listitem" class="">
-                  Admin
-                </li>
-                <li value="-" role="listitem" class="">
-                  Power User
-                </li>
-                <li value="-" role="listitem" class="">
-                  Regular User
-                </li>
-              </ol>
-            </li>
-            <li value="*" role="listitem" class="">
-              Deleting Your Account
-            </li>
-          </ol>
-        </div>
-        <div class="extra content">
-          <i aria-hidden="true" class="clock outline icon" /> 12:00 - 15:00 AM
-          (GMT)
         </div>
       </div>
 
-      <div class="ui card ">
-        <div class="content">
-          <div class="ui feed">
-            <div class="event">
-              <div class="content">
-                <div class="date">1 day ago</div>
-                <div class="summary">
-                  <a href="/">Jenny Hess</a>
-                  submitted this task.
+      <div className="ui card">
+        <div className="content">
+          <h2 className="article__title">
+            <i aria-hidden="true" className="map marker alternate icon" />
+            {details.organization}
+          </h2>
+        </div>
+        <div className="content">
+          <ol className="ui list">
+            {details.skills.map(li => (
+              <li value="*">{li}</li>
+            ))}
+          </ol>
+        </div>
+
+        <div className="extra content">
+          <div className="ui red pointing basic label">
+            <i aria-hidden="true" className="clock outline icon" />
+            {details.workTime}
+          </div>
+        </div>
+      </div>
+
+      <div className="ui card ">
+        <div className="content">
+          <div className="ui feed">
+            <div className="event">
+              <div className="content">
+                <div className="date">{details.acceptanceTime}</div>
+                <div className="summary">
+                  <a href="/">{details.acceptedBy}</a>
+                  accepted this task.
                 </div>
               </div>
             </div>
