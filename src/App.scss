@@ -1,5 +1,6 @@
 body {
   background: #f3f3f3;
+  color: #333;
   padding: 20px;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
@@ -27,13 +28,13 @@ body {
       flex-basis: 50%;
       width: 50%;
     }
-  }
 
-  @media (max-width: 600px) {
     .card {
       width: 100% !important;
     }
+  }
 
+  @media (max-width: 600px) {
     .article {
       &:hover {
         box-shadow: none;
@@ -119,4 +120,8 @@ body {
 
 .extra {
   margin: 0 auto !important;
+}
+
+.content > .date {
+  font-size: 0.875rem !important;
 }
