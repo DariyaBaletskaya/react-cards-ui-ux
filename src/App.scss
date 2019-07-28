@@ -55,7 +55,6 @@ body {
   padding: 0.8rem;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(#000, 0.2);
-  cursor: pointer;
   transition: 0.3s ease;
 
   &:hover {
@@ -102,8 +101,12 @@ body {
 /* Semantic-UI styles customization */
 .summary > a {
   display: inline-block;
-  margin-right: 0.2rem;
+  margin-right: 0.3rem;
   color: #db2828;
+
+  &:hover {
+    color: #6435c9;
+  }
 }
 
 .metadata {
